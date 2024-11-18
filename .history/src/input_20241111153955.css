@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-5 py-1 text-sm border-2 border-white sm:px-10 rounded-xl sm:text-lg hover:bg-white hover:text-black hover:shadow-xl;
+}
+
+.p-resp {
+  @apply px-4   py-5;
+}
+
+.title {
+  @apply py-3 text-2xl text-center underline font-orelegaone;
+}
+
+/* Kontainer untuk galeri */
+.gallery-container {
+  overflow: hidden; /* Menghindari elemen keluar dari area tampilan */
+  width: 100%; /* Menyusun gambar sesuai lebar kontainer */
+}
+
+.gallery-images {
+  display: flex; /* Menyusun gambar secara horizontal */
+  animation: slide-right 15s linear infinite; /* Durasi animasi 15 detik, terus berulang */
+}
+
+.gallery-images img {
+  width: 100%; /* Memastikan gambar mengisi ruang dengan baik */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out; /* Efek transisi ketika gambar bergerak */
+  border-radius: 8px;
+}
+
+/* Animasi untuk memindahkan gambar */
+@keyframes slide-right {
+  0% {
+    transform: translateX(0); /* Memulai dari posisi normal */
+  }
+  25% {
+    transform: translateX(-100%); /* Gambar pertama keluar dari kiri */
+  }
+  50% {
+    transform: translateX(-200%); /* Gambar kedua keluar */
+  }
+  75% {
+    transform: translateX(-300%); /* Gambar ketiga keluar */
+  }
+  100% {
+    transform: translateX(-400%); /* Gambar terakhir keluar */
+  }
+}

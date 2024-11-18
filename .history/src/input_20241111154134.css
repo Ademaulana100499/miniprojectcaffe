@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-5 py-1 text-sm border-2 border-white sm:px-10 rounded-xl sm:text-lg hover:bg-white hover:text-black hover:shadow-xl;
+}
+
+.p-resp {
+  @apply px-4   py-5;
+}
+
+.title {
+  @apply py-3 text-2xl text-center underline font-orelegaone;
+}

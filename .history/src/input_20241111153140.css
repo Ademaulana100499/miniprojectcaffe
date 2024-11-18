@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply px-5 py-1 text-sm border-2 border-white sm:px-10 rounded-xl sm:text-lg hover:bg-white hover:text-black hover:shadow-xl;
+}
+
+.p-resp {
+  @apply px-4   py-5;
+}
+
+.title {
+  @apply py-3 text-2xl text-center underline font-orelegaone;
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%); /* Mulai dari luar kiri */
+  }
+  100% {
+    transform: translateX(0); /* Berhenti tepat di sisi kanan */
+  }
+}
+
+.animate-slide-right {
+  animation: slide-right 10s linear infinite;
+  /* Mengatur agar gambar mengisi penuh tinggi */
+  object-fit: cover;
+  /* Gambar mengalir sesuai ukuran kontainer */
+  height: 100%;
+}
